@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="le=edge">
+    <title>Luis Miguel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="img/lm-logo.png" alt="Luis Miguel Logo" class="logo-img">
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#biografia">Biografía</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#albums">Discografía</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#videos">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image: url(img/Luismi.jpg);">
+        <img src="img/letra.png" alt="Luis Miguel" class="logo-img">
+    </section>
+
+    <section class="descripcion" id="biografia">
+        <h2>¿Quién es Luis Miguel?</h2>
+        <p>Luis Miguel Gallego Basteri (19 de abril de 1970) cantante y productor musical. Nació en San Juan, Puerto
+            Rico. Por cuestiones familiares Luis Miguel tuvo que trasladarse con su familia a México. ​En este país
+            duraron un buen tiempo hasta que se trasladaron a la capital española.</p>
+        <p><strong>Edad:</strong> 54 años</p>
+        <p><strong>Residencia:</strong> Estados Unidos</p>
+        <p><strong>Géneros:</strong> Pop, Bolero, Mariachi, Jazz</p>
+    </section>
+
+    <section class="trayectoria" id="trayectoria">
+        <h2>Trayectoria</h2>
+        <p>Desde su debut en los años 80, Luis Miguel ha vendido más de 100 millones de discos en todo el mundo y ha
+            ganado múltiples premios Grammy.</p>
+    </section>
+
+    <section class="albums" id="albums">
+        <h2>Discografía</h2>
+        <ul>
+            <li>
+                <span onclick="toggleCanciones('romance')" class="album" style="cursor:pointer;">
+                    <img src="img/romance.jpg" alt="Romance" class="album-img">Romance (1991)</span>
+                <ul id="romance" class="canciones oculto">
+                    <li><strong>No Me Platiques Mas</strong> - <a href="#"
+                            onclick="mostrarLetra('no_me_platiques_mas', event)">Ver Letra</a> |
+                        <a href="https://open.spotify.com/intl-es/track/1kS5xIvvytkr5Ut1JkQ9SM?si=7d64b338bdb7408b"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/no_me_platiques_mas.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                        <div id="no_me_platiques_mas" class="letra oculto"></div>
+                    </li>
+
+                    <li><strong>Inolvidable</strong> - <a href="#" onclick="mostrarLetra('inolvidable', event)">Ver
+                            Letra</a> |
+                        <a href="https://open.spotify.com/intl-es/track/2pSZjEpbXwlocV8js7MNmu?si=cae99f9e2b244e28"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/inolvidable.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="inolvidable" class="letra oculto"></div>
+
+                    <li><strong>La Puerta</strong> - <a href="#" onclick="mostrarLetra('la_puerta', event)">Ver
+                            Letra</a> |
+                        <a href="https://open.spotify.com/intl-es/track/5dlNzEPBCM7HgmhfaK0xph?si=d19811d846324677"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/la_puerta.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="la_puerta" class="letra oculto"></div>
+
+                    <li><strong>La Barca</strong> - <a href="#" onclick="mostrarLetra('la_barca', event)">Ver Letra</a>
+                        |
+                        <a href="https://open.spotify.com/track/2MkeDQiyZ8MV45IjLhCPSF?si=9c8a04f527274346"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/la_barca.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="la_barca" class="letra oculto"></div>
+
+                    <li><strong>Te Extraño</strong> - <a href="#" onclick="mostrarLetra('teextraño', event)">Ver
+                            Letra</a> |
+                        <a href="https://open.spotify.com/track/1uSRXFGgEkukRZIa9WsX52?si=7a57d71cd5e643df"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/te_extraño.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="teextraño" class="letra oculto"></div>
+
+                    <li><strong>Usted</strong> - <a href="#" onclick="mostrarLetra('usted', event)">Ver Letra</a> |
+                        <a href="https://open.spotify.com/track/0MHSnVk2CrGP8hIkxpxwMJ?si=f3601b12537f40cf"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/usted.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="usted" class="letra oculto"></div>
+
+                    <li><strong>Contigo En La Distancia</strong> - <a href="#"
+                            onclick="mostrarLetra('contigo', event)">Ver Letra</a> |
+                        <a href="https://open.spotify.com/track/03oCjV73Utu9KpXrgcqoTJ?si=7936522b0f0b453b"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/contigo_en_la_distancia.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="contigo" class="letra oculto"></div>
+
+                    <li><strong>Mucho Corazón</strong> - <a href="#" onclick="mostrarLetra('mucho_corazon', event)">Ver
+                            Letra</a> |
+                        <a href="https://open.spotify.com/track/5C1HYHG6b1wk9MpC2UP9C6?si=b91c69273ddf4c99"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/mucho_corazon.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="mucho_corazon" class="letra oculto"></div>
+
+                    <li><strong>La Mentira</strong> - <a href="#" onclick="mostrarLetra('la_mentira', event)">Ver
+                            Letra</a> |
+                        <a href="https://open.spotify.com/track/3wogsSWyEEu5eVgLqUqySF?si=623921f3d5014f41"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/la_mentira.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="la_mentira" class="letra oculto"></div>
+
+                    <li><strong>Cuando Vuelva a Tu Lado</strong> - <a href="#"
+                            onclick="mostrarLetra('cuando_vuelva_a_tu_lado', event)">Ver Letra</a> |
+                        <a href="https://open.spotify.com/track/3dsvRFQ7YWkNBH8GTPwf7Q?si=e166cefca1e9479d"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/cuando_vuelva_a_tu_lado.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="cuando_vuelva_a_tu_lado" class="letra oculto"></div>
+
+                    <li><strong>No Sé Tú</strong> - <a href="#" onclick="mostrarLetra('no_se_tu', event)">Ver Letra</a>
+                        |
+                        <a href="https://open.spotify.com/track/2DAsLftcRKP3iarCPmI1RY?si=ee22ac0c25284171"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/no_se_tu.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="no_se_tu" class="letra oculto"></div>
+
+                    <li><strong>Cómo</strong> - <a href="#" onclick="mostrarLetra('como', event)">Ver Letra</a> |
+                        <a href="https://open.spotify.com/track/0pWAOLzD2VencHdiDnmRos?si=5425f31fdee741c2"
+                            target="_blank">Spotify</a>
+                        <audio controls>
+                            <source src="music/como.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el audio.
+                        </audio>
+                    </li>
+                    <div id="como" class="letra oculto"></div>
+
+
+            </li>
+        </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('directo')" class="album" style="cursor:pointer;">
+                <img src="img/directo.jpg" alt="Directo" class="album-img"> Directo al Corazon (1982)</span>
+            <ul id="directo" class="canciones oculto">
+                <li><strong>Directo Al Corazon</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Recuerdos Encadenados</strong></li>
+                <li><strong>Lo Lei En Tu Diario</strong></li>
+                <li><strong>A Mis Años Ya Te Amo</strong></li>
+                <li><strong>Nosotros Dos</strong></li>
+                <li><strong>Rock De La Niña Cruel</strong></li>
+                <li><strong>Marcela</strong></li>
+                <li><strong>Si Ves A Mi Chica, Dile Que La Amo</strong></li>
+                <li><strong>No Es Permitido</strong></li>
+                <li><strong>La Juventud</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('1+1')" class="album" style="cursor:pointer;">
+                <img src="img/enamorados.jpg" alt="1+2=2 Enamorados" class="album-img"> 1+1=2 Enamorados (1982)</span>
+            <ul id="1+1" class="canciones oculto">
+                <li><strong>1+1=2 Enamorados</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Amor De Escuela</strong></li>
+                <li><strong>Tomemos Los Patines</strong></li>
+                <li><strong>Hay Un Algo</strong></li>
+                <li><strong>Lo Que Me Gusta</strong></li>
+                <li><strong>Balada Para Mi Abuela</strong></li>
+                <li><strong>Mentira</strong></li>
+                <li><strong>El Tiempo</strong></li>
+                <li><strong>Adolescente Soñador</strong></li>
+                <li><strong></strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('decidete')" class="album" style="cursor:pointer;">
+                <img src="img/decidete.jpg" alt="Decidete" class="album-img"> Decidete (1983)</span>
+            <ul id="decidete" class="canciones oculto">
+                <li><strong>Decidete</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Lupe</strong></li>
+                <li><strong>No Me Puedes Dejar Asi</strong></li>
+                <li><strong>Safari</strong></li>
+                <li><strong>Bandido Cupido</strong></li>
+                <li><strong>Campeón</strong></li>
+                <li><strong>El Brujo</strong></li>
+                <li><strong>En Japon</strong></li>
+                <li><strong>Soy Como Soy</strong></li>
+                <li><strong>Mini Amor</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('palabra')" class="album" style="cursor:pointer;">
+                <img src="img/palabra.jpg" alt="Palabra" class="album-img"> Palabra De Honor (1984)</span>
+            <ul id="palabra" class="canciones oculto">
+                <li><strong>Tú No Tienes Corazón</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Un Rock and Roll Sonó</strong></li>
+                <li><strong>La Chica Del Bikini Azul</strong></li>
+                <li><strong>Lili</strong></li>
+                <li><strong>Palabra De Honor</strong></li>
+                <li><strong>Rey De Corazones</strong></li>
+                <li><strong>Me Muere Por Ti</strong></li>
+                <li><strong>Isabel</strong></li>
+                <li><strong>Me Gustas Tal Como Eres</strong></li>
+                <li><strong>Muñeca Rota</strong></li>
+                <li><strong>Háblame</strong></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('yanuncamas')" class="album" style="cursor:pointer;">
+                <img src="img/nunca.jpg" alt="Ya Nunca Mas" class="album-img"> Ya Nunca Más (1984)</span>
+            <ul id="yanuncamas" class="canciones oculto">
+                <li><strong>Ya Nunca Más</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>La Juventud</strong></li>
+                <li><strong>Juego De Amigos - Instrumental</strong></li>
+                <li><strong>Mama, Mama</strong></li>
+                <li><strong>Juego De Amigos</strong></li>
+                <li><strong>La Juventud - Instrumental</strong></li>
+                <li><strong>Ora Pronobis</strong></li>
+                <li><strong>Ya Nunca Más - Instrumental</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('fiebre')" class="album" style="cursor:pointer;">
+                <img src="img/fiebre.jpg" alt="Fiebre" class="album-img"> Fiebre De Amor (1985)</span>
+            <ul id="fiebre" class="canciones oculto">
+                <li><strong>Fiebre De Amor</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Acapulco Amor</strong></li>
+                <li><strong>Por Ti</strong></li>
+                <li><strong>Todo El Amor Del Mundo</strong></li>
+                <li><strong>Este Amor</strong></li>
+                <li><strong>Fiebre De Amor - Instrumental</strong></li>
+                <li><strong>Siempre Me Quedo Siempre Me Voy</strong></li>
+                <li><strong>Sueños</strong></li>
+                <li><strong>Siempre Te Seguiré</strong></li>
+                <li><strong>Los Muchachos De Hoy</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('soy')" class="album" style="cursor:pointer;">
+                <img src="img/soy.jpg" alt="Soy" class="album-img"> Soy Como Quiero Ser (1987)</span>
+            <ul id="soy" class="canciones oculto">
+                <li><strong>Es Mejor</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Sin Hablar</strong></li>
+                <li><strong>Ahora Te Puedes Marchar</strong></li>
+                <li><strong>Yo Que No Vivo Sin Ti</strong></li>
+                <li><strong>Eres Tú</strong></li>
+                <li><strong>Sólo Tú</strong></li>
+                <li><strong>No Me Puedo Escapar De Ti</strong></li>
+                <li><strong>Cuando Calienta El Sol</strong></li>
+                <li><strong>Soy Como Quiero Ser</strong></li>
+                <li><strong>Perdóname</strong></li>
+                <li><strong>Sunny</strong></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('busca')" class="album" style="cursor:pointer;">
+                <img src="img/busca.jpg" alt="Busca" class="album-img"> Busca Una Mujer (1988)</span>
+            <ul id="busca" class="canciones oculto">
+                <li><strong>Fría Como El Viento</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Esa Niña</strong></li>
+                <li><strong>Culpable O No - Miénteme Como Siempre</strong></li>
+                <li><strong>Un Hombre Busca Una Mujer</strong></li>
+                <li><strong>La Incondicional</strong></li>
+                <li><strong>Separados</strong></li>
+                <li><strong>Por Favor Señora</strong></li>
+                <li><strong>Pupilas De Gato</strong></li>
+                <li><strong>El Primero</strong></li>
+                <li><strong>Soy Un Perdedor</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('20años')" class="album" style="cursor:pointer;">
+                <img src="img/20años.jpg" alt="20 años" class="album-img"> 20 Años (1990)</span>
+            <ul id="20años" class="canciones oculto">
+                <li><strong>Entrégate</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Oro De Ley</strong></li>
+                <li><strong>Tengo Todo Excepto a Ti</strong></li>
+                <li><strong>Será Que No Me Amas</strong></li>
+                <li><strong>Amante Del Amor</strong></li>
+                <li><strong>Hoy El Aire Huele a Ti</strong></li>
+                <li><strong>Cuestión De Piel</strong></li>
+                <li><strong>Más Allá De Todo</strong></li>
+                <li><strong>Alguien Como Tú</strong></li>
+                <li><strong>Más</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('aries')" class="album" style="cursor:pointer;">
+                <img src="img/aries.jpg" alt="Aries" class="album-img"> Aries (1993)</span>
+            <ul id="aries" class="canciones oculto">
+                <li><strong>Suave</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Me Niego Estar Solo</strong></li>
+                <li><strong>Luz Verde</strong></li>
+                <li><strong>Hasta El Fin</strong></li>
+                <li><strong>Ayer</strong></li>
+                <li><strong>Qué Nivel De Mujer</strong></li>
+                <li><strong>Pensar En Ti</strong></li>
+                <li><strong>Dame Tu Amor</strong></li>
+                <li><strong>Hasta Que Me Ovides</strong></li>
+                <li><strong>Tú Y Yo</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('segundo')" class="album" style="cursor:pointer;">
+                <img src="img/segundoromance.jpg" alt="Segundo Romance" class="album-img"> Segundo Romance (1994)</span>
+            <ul id="segundo" class="canciones oculto">
+                <li><strong>El Dia Que Me Quieras</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Sin Ti</strong></li>
+                <li><strong>Somos Novios</strong></li>
+                <li><strong>La Media Vuelta</strong></li>
+                <li><strong>Solamente Una Vez</strong></li>
+                <li><strong>Todo Y Nada</strong></li>
+                <li><strong>Historia De Un Amor</strong></li>
+                <li><strong>Como Yo Te Amé</strong></li>
+                <li><strong>Nosotros</strong></li>
+                <li><strong>Yo Se Que Volverás</strong></li>
+                <li><strong>Delirio</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('nadaesigual')" class="album" style="cursor:pointer;">
+                <img src="img/nada.jpg" alt="Nada Es Iguak" class="album-img"> Nada Es Igual (1996)</span>
+            <ul id="nadaesigual" class="canciones oculto">
+                <li><strong>Si Te Vas</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Abrázame</strong></li>
+                <li><strong>Dame</strong></li>
+                <li><strong>Nada Es Igual</strong></li>
+                <li><strong>Todo Por Su Amor</strong></li>
+                <li><strong>Qué Tu Te vas</strong></li>
+                <li><strong>Sintiéndote Lejos</strong></li>
+                <li><strong>Cómo Es Posible Que a Mi Lado</strong></li>
+                <li><strong>Un Día Mas</strong></li>
+                <li><strong>Sueña</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('romances')" class="album" style="cursor:pointer;">
+                <img src="img/romances.jpg" alt="Romances" class="album-img"> Romances (1997)</span>
+            <ul id="romances" class="canciones oculto">
+                <li><strong>Voy a Apagar La Luz - Contigo Aprendí</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Sabor a Mi</strong></li>
+                <li><strong>Por Debajo De La Mesa</strong></li>
+                <li><strong>La Gloria Eres Tu</strong></li>
+                <li><strong>Amanecer</strong></li>
+                <li><strong>Encadenados</strong></li>
+                <li><strong>Besame Mucho</strong></li>
+                <li><strong>Contigo - Estar Contigo</strong></li>
+                <li><strong>Noche De Ronda</strong></li>
+                <li><strong>El Reloj</strong></li>
+                <li><strong>Jurame</strong></li>
+                <li><strong>De Quererte Así</strong></li>
+                <li><strong>Uno</strong></li>
+                <li><strong>Mañana De Carnaval</strong></li>
+
+
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('amarte')" class="album" style="cursor:pointer;">
+                <img src="img/amarte.jpg" alt="Amarte Es Un Placer" class="album-img"> Amarte Es Un PLacer (1999)</span>
+            <ul id="amarte" class="canciones oculto">
+                <li><strong>Tu Mirada</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Soy yo</strong></li>
+                <li><strong>Sol, arena y mar</strong></li>
+                <li><strong>O Tu O Ninguna</strong></li>
+                <li><strong>Quiero</strong></li>
+                <li><strong>Dormir Contigo</strong></li>
+                <li><strong>Dímelo en un beso</strong></li>
+                <li><strong>No me fio</strong></li>
+                <li><strong>Te propongo esta noche</strong></li>
+                <li><strong>Tú sólo tú</strong></li>
+                <li><strong>Ese momento</strong></li>
+                <li><strong>Amarte es un placer</strong></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('misromances')" class="album" style="cursor:pointer;">
+                <img src="img/misromances.jpg" alt="Mis Romances" class="album-img"> Mis Romances (2001)</span>
+            <ul id="misromances" class="canciones oculto">
+                <li><strong>Qué sabes tú</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Tú me acostumbraste</strong></li>
+                <li><strong>Perfidia</strong></li>
+                <li><strong>Amor (Amor,amor,amor)</strong></li>
+                <li><strong>Cómo duele</strong></li>
+                <li><strong>Toda una vida</strong></li>
+                <li><strong>El tiempo que te queda libre</strong></li>
+                <li><strong>Amorcito corazón</strong></li>
+                <li><strong>La última noche</strong></li>
+                <li><strong>Volver</strong></li>
+                <li><strong>Al que me siga</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('boleros')" class="album" style="cursor:pointer;">
+                <img src="img/boleros.jpg" alt="Mis Boleros Favoritos" class="album-img"> Mis Boleros Favoritos
+                (2002)</span>
+            <ul id="boleros" class="canciones oculto">
+                <li><strong>No Me Platiques Más</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>La Barca</strong></li>
+                <li><strong>La Gloria Eres Tu</strong></li>
+                <li><strong>No Sé Tú</strong></li>
+                <li><strong>Historia De Un Amor</strong></li>
+                <li><strong>Somos Novios</strong></li>
+                <li><strong>Solamente Una Vez</strong></li>
+                <li><strong>El Día Que Me Quieras</strong></li>
+                <li><strong>El Reloj</strong></li>
+                <li><strong>Por Debajo De La Mesa</strong></li>
+                <li><strong>Encadenados</strong></li>
+                <li><strong>Sabor a Mi</strong></li>
+                <li><strong>Perdifia</strong></li>
+                <li><strong>Hasta que vuelvas</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('33')" class="album" style="cursor:pointer;">
+                <img src="img/33.jpg" alt="33" class="album-img"> 33 (2003)</span>
+            <ul id="33" class="canciones oculto">
+                <li><strong>Un te amor</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Con tus Besos</strong></li>
+                <li><strong>Devuélveme El Amor</strong></li>
+                <li><strong>Te necesito</strong></li>
+                <li><strong>Nos hizo falta el tiempo</strong></li>
+                <li><strong>Eres</strong></li>
+                <li><strong>Ahora que te vas</strong></li>
+                <li><strong>Que tristeza</strong></li>
+                <li><strong>Y sigo</strong></li>
+                <li><strong>Vuelve</strong></li>
+                <li><strong>Qué hacer</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('mexico')" class="album" style="cursor:pointer;">
+                <img src="img/mexico.jpg" alt="Mexico en la piel" class="album-img"> Mexico en la Piel (2005)</span>
+            <ul id="mexico" class="canciones oculto">
+                <li><strong>El viajero</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Entrega Total</strong></li>
+                <li><strong>Échame a Mi La Culpa </strong></li>
+                <li><strong>México En La Piel</strong></li>
+                <li><strong>Cruz De Olvido</strong></li>
+                <li><strong>De Qué Manera Te Olvido</strong></li>
+                <li><strong>Luz De Luna</strong></li>
+                <li><strong>Motivos</strong></li>
+                <li><strong>Cielo Rojo</strong></li>
+                <li><strong>Paloma Querida</strong></li>
+                <li><strong>Que Seas Feliz</strong></li>
+                <li><strong>Un Mundo Raro</strong></li>
+                <li><strong>Sabes Una Cosa</strong></li>
+                <li><strong>Por un amor</strong></li>
+                <li><strong>Mi Ciudad</strong></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('complices')" class="album" style="cursor:pointer;">
+                <img src="img/complices.jpg" alt="Complices" class="album-img"> Cómplices (2008)</span>
+            <ul id="complices" class="canciones oculto">
+                <li><strong>Te Desean</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Dicen</strong></li>
+                <li><strong>Ay cariño</strong></li>
+                <li><strong>De nuevo el paraíso</strong></li>
+                <li><strong>Si tú te atreves</strong></li>
+                <li><strong>Amor A Mares</strong></li>
+                <li><strong>Estrenando Amor</strong></li>
+                <li><strong>Bravo Amor Bravo</strong></li>
+                <li><strong>Tu Imaginación</strong></li>
+                <li><strong>Cómplices</strong></li>
+                <li><strong>Amor De Hecho</strong></li>
+                <li><strong>Se Amaban</strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span onclick="toggleCanciones('33')" class="album" style="cursor:pointer;">
+                <img src="img/luismiguel.jpg" alt="Luis Miguel" class="album-img"> Luis Miguel Edición De Lujo
+                (2011)</span>
+            <ul id="33" class="canciones oculto">
+                <li><strong>Labíos de miel</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>Mujer de fuego</strong></li>
+                <li><strong>Tres palabras</strong></li>
+                <li><strong>Ella es así</strong></li>
+                <li><strong>No existen limites</strong></li>
+                <li><strong>Siento</strong></li>
+                <li><strong>Lo que queda de mi</strong></li>
+                <li><strong>Es por ti</strong></li>
+                <li><strong>¿De quién es usted?</strong></li>
+                <li><strong>Talvez me mientes</strong></li>
+                <li><strong>Labíos de miel - Dance Remix</strong></li>
+                <li><strong>Mujer de fuego - Dance Remix</strong></li>
+                <li><strong>Talvez me mientes - Dance Remix</strong></li>
+                <li><strong>Es por ti - Dance Remix</strong></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <span onclick="toggleCanciones('mexicoporsiempre')" class="album" style="cursor:pointer;">
+                <img src="img/mexicoporsiempre.jpg" alt="MEXICO Por Siempre" class="album-img"> ¡MÉXICO Por Siempre!
+                (2017) </span>
+            <ul id="mexicoporsiempre" class="canciones oculto">
+                <li><strong>La fiesta del mariachi</strong> <a href="#" onclick=""></a> </li>
+                <li><strong>No me amenaces</strong></li>
+                <li><strong>Llamarada</strong></li>
+                <li><strong>El Balajú / Huapango</strong></li>
+                <li><strong>Soy lo prohibido</strong></li>
+                <li><strong>El siete mares</strong></li>
+                <li><strong>¿Por qué te conocí?</strong></li>
+                <li><strong>Deja que salga la luna</strong></li>
+                <li><strong>Serenata huasteca</strong></li>
+                <li><strong>Que te vaya bonito</strong></li>
+                <li><strong>No discutamos</strong></li>
+                <li><strong>Sin sangre en las venas</strong></li>
+                <li><strong>Qué bonita es mi tierra</strong></li>
+                <li><strong>Los días felices</strong></li>
+            </ul>
+        </li>
+
+        <!-- Vincular script.js -->
+        <script src="js/script.js"></script>
+        </li>
+        </ul>
+    </section>
+
+    <script>
+        function toggleCanciones(id) {
+            var canciones = document.getElementById(id);
+            canciones.classList.toggle("oculto");
+
+            function mostrarLetra(id) {
+                var letra = document.getElementById(id);
+                letra.classList.toggle("oculto");
+            }
+        }
+    </script>
+
+    <section class="galeria" id="galeria">
+        <h2>Galería</h2>
+        <div class="grid-galeria">
+            <img src="galeria/foto1.png" alt="Luis Miguel 1">
+            <img src="galeria/foto2.png" alt="Luis Miguel 2">
+            <img src="galeria/foto3.png" alt="Luis Miguel 3">
+            <img src="galeria/foto4.png" alt="Luis Miguel 4">
+            <img src="galeria/foto5.png" alt="Luis Miguel 5">
+            <img src="galeria/foto6.png" alt="Luis Miguel 6">
+            <img src="galeria/foto7.png" alt="Luis Miguel 7">
+            <img src="galeria/foto8.png" alt="Luis Miguel 8">
+            <img src="galeria/foto9.png" alt="Luis Miguel 9">
+            <img src="galeria/foto10.png" alt="Luis Miguel 10">
+            <img src="galeria/foto11.png" alt="Luis Miguel 11">
+            <img src="galeria/foto12.png" alt="Luis Miguel 12">
+        </div>
+    </section>
+    <section class="videos" id="videos">
+        <h2>Video</h2>
+        <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ob1LuCRqGIw?si=_gVMMjmEQkcuv9E-"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+    </section>
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+    <footer class="footer">
+
+        <p>Síguelo en sus redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/luismiguelofficial" target="_blank">
+                <img src="img/fb.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/luismiguel" target="_blank">
+                <img src="img/ig.svg" alt="Instagram">
+            </a>
+            <a href="https://x.com/LMXLM" target="_blank">
+                <img src="img/tw.svg" alt="Twitter">
+            </a>
+            <a href="https://www.youtube.com/channel/UCQHnOnsryRQmmr6pU3lAupg" target="_blank">
+                <img src="img/youtube.svg" alt="YouTube">
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/2nszmSgqreHSdJA3zWPyrW?si=1Oo56lPPQt-sSHVvZ3daZw"
+                target="_blank">
+                <img src="img/sp.svg" alt="Spotify">
+            </a>
+            <p>Todos los derechos reservados <span class="fecha"></span> &copy; Desarrollado por Uriel Castillo
+                Rodriguez</p>
+        </div>
+    </footer>
+</body>
+
+</html>
