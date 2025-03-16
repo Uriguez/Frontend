@@ -1,0 +1,216 @@
+body
+{
+  background-color: rgb(33, 33, 33);
+  /*background-image:url(images/symphony.png);*/
+  margin: 10px auto;
+  width:70%;
+  font-family:"Roboto";
+}
+
+header {
+  width:100%; /* Establecemos que el header abarque el 100% del documento */
+  overflow:hidden; /* Eliminamos errores de float */
+  background-color: #ececec;
+  margin-bottom:0px;
+  padding: 0px;
+  border-radius: 25px 25px 0px 0px; /*superior, derecho, inferior, izquierdo */
+  border-style: none;
+}
+header>div>h1,h2
+  {
+  font-family: "Roboto";
+  letter-spacing: 1px;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-align: center;
+  margin: 20px 20px 0px 70px;
+}
+
+header>div>p
+{
+  font-family: "Roboto";
+  text-align: center;
+  margin: auto;
+  size: 14px;
+  margin: 0px 20px 0px 70px;
+  line-height: 1.5;
+} 
+
+  .divizq{
+  float: left;
+  width: 30%;
+  margin-top: 0px;
+  align-content:center;
+}
+
+  .divder{
+  float: right;
+  width: 70%;
+  text-align:center;
+  align-content:center;
+margin:auto;
+}
+.imgizq
+{
+  width: 300px;
+  height: 341px;
+  margin-top:0px;
+}
+li
+{
+  font-family: "Roboto";
+  text-align: justify;
+  margin: auto;
+  size: 10px;
+  line-height: 2;
+}
+.listaside
+{
+  font-family: "Roboto";
+  text-align: left;
+  margin: auto;
+  size: 10px;
+  line-height: 1;
+}
+section
+{
+  float: right;
+  width: 65%;
+  text-align:justify;
+  margin-top: 10px;
+  background-color: #fff;
+}
+article
+{
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  border-style: solid;
+  border-width: 0px;
+  background-color: #fff;
+}
+aside{
+  float: left;
+  width: 35%;
+  text-align: justify;
+  margin-top: 0px;
+  background-color: #ececec;
+}
+blockquote
+{
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ececec;
+  background-color:#ececec;
+}
+.icon
+{ 
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  background-color:rgb(243, 241, 241);
+  border-radius: 100%;
+  float: left;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.botonredes {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color:rgb(245, 245, 245);
+  border-radius: 100%;
+}
+
+.botonredes img {
+  width: 20px; 
+  height: 20px;
+}
+footer {
+  width:100%; /* Establecemos que el header abarque el 100% del documento */
+  overflow:hidden; /* Eliminamos errores de float */
+  background-color: #ececec;
+  margin-bottom:0px;
+  padding: 0px;
+  border-radius: 0px 0px 25px 25px; /*superior, derecho, inferior, izquierdo */
+  border-style: none;
+  margin: auto;
+}
+.contenedor
+{
+  padding: 10px 20px 10px 20px;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 2em;
+  box-shadow: 0px 5px 3px rgba(0,0,0, .4);
+}
+
+/* Estilos para dispositivos con un ancho máximo de 768px (tablets y celulares) */
+@media screen and (max-width: 768px) {
+  body {
+      width: 100%;  /* Ajustar el ancho del cuerpo */
+      height: 100%;  /* Ajustar el ancho del cuerpo */
+      margin: 0;  
+  }
+
+  /* Hacer el header más compacto */
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2px;
+  }
+
+  /* Ajustar los divs dentro del header */
+  .divizq, .divder {
+      width: 100%;
+      text-align: center;
+      float: none;
+  }
+
+  /* Redimensionar la imagen de perfil */
+  .imgizq {
+      width: 150px;
+      height: auto;
+      margin: 10px auto;
+  }
+
+  /* Ajustar el tamaño de la sección principal */
+  section {
+      width: 100%;
+      float: none;
+      padding: 10px;
+  }
+
+  /* Ajustar el aside */
+  aside {
+      width: 100%;
+      float: none;
+      padding: 10px;
+      text-align: center;
+  }
+
+  /* Ajustar iconos */
+  .icon {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+  }
+
+  /* Ajustar redes sociales */
+  .botonredes {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+  }
+
+  /* Centrar el footer */
+  footer {
+      text-align: center;
+      padding: 10px;
+  }
+}
