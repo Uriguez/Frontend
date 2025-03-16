@@ -1,4 +1,5 @@
-// Objeto con las letras de las canciones
+
+// Objeto con las letras de las canciones del Album El Romance 1991
 const letrasCanciones = {
 "no_me_platiques_mas": `No me platiques más <br>
 Lo que debió pasar <br>
@@ -443,3 +444,55 @@ function toggleMenu() {
     let nav = document.getElementById("nav-menu");
     nav.classList.toggle("mostrar");
 }
+
+//Funcion de anterior, siguiente, abrir y cerrar las imagenes de la Galeria de Luis Miguel
+document.addEventListener("DOMContentLoaded", function () {
+    const imagenes = document.querySelectorAll(".grid-galeria img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let indiceActual = 0;
+
+    function abrirLightbox(index) {
+        indiceActual = index;
+        lightboxImg.src = imagenes[indiceActual].src;
+        lightbox.style.display = "flex";
+    }
+
+    function cerrarLightbox() {
+        lightbox.style.display = "none";
+    }
+
+    function cambiarImagen(direccion) {
+        indiceActual += direccion;
+
+        if (indiceActual < 0) {
+            indiceActual = imagenes.length - 1; // Ir a la última imagen
+        } else if (indiceActual >= imagenes.length) {
+            indiceActual = 0; // Volver a la primera imagen
+        }
+
+        lightboxImg.src = imagenes[indiceActual].src;
+    }
+
+    imagenes.forEach((img, index) => {
+        img.addEventListener("click", () => abrirLightbox(index));
+    });
+
+    document.querySelector(".cerrar").addEventListener("click", cerrarLightbox);
+    document.querySelector(".anterior").addEventListener("click", () => cambiarImagen(-1));
+    document.querySelector(".siguiente").addEventListener("click", () => cambiarImagen(1));
+
+    // Cerrar de otra manera con la tecla ESC
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            cerrarLightbox();
+        } else if (event.key === "ArrowRight") {
+            cambiarImagen(1);
+        } else if (event.key === "ArrowLeft") {
+            cambiarImagen(-1);
+        }
+    });
+});
+
+
+
